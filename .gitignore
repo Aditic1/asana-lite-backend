@@ -1,3 +1,8 @@
 node_modules
 .env
 dist
+clear
+clear.pub
+*.pem
+*.key
+src/generated/prisma/
