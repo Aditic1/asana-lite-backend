@@ -2,10 +2,9 @@ import 'dotenv/config';
 import type { Request, Response } from 'express';
 import express from 'express';
 
+import { errorHandler } from './common/middleware/index.js';
 import { logger } from './common/utils/index.js';
 import { authRoutes } from './modules/auth/routes/index.js';
-
-import { errorHandler } from '@/common/middlewares/index.js';
 
 const app = express();
 
