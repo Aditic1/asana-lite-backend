@@ -24,7 +24,7 @@ import type { UserRequest } from '@/types/express.js';
  * }
  */
 export const authMiddleware = (req: UserRequest, _res: Response, next: NextFunction): void => {
-  if (req.headers.authorization === null) {
+  if (req.headers.authorization === undefined) {
     return next(new UnauthorizedError());
   }
   try {
